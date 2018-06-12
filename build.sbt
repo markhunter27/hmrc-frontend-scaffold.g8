@@ -11,6 +11,8 @@ lazy val root = (project in file("."))
     // disable this to help with debugging tests
     scriptedBufferLog := true,
 
+    sbtPlugin := true,
+
     test in Test := {
       (scripted in Test).toTask("").value
     }
